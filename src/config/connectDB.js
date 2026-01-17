@@ -1,0 +1,10 @@
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+async function connectDB() {
+  await mongoose.connect(process.env.CONNECTION_URL + "/Task-Manager");
+}
+
+export { connectDB };
